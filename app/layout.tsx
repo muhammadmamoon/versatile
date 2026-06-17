@@ -12,12 +12,18 @@ export const metadata: Metadata = {
   description: "High-end multi-regional commercial and residential facility management execution solutions across Saudi Arabia and the UAE[cite: 7, 8].",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-slate-50 text-slate-900 antialiased overflow-x-hidden min-h-screen flex flex-col justify-between`}>
+    <html lang="en">
+      <body
+        className={`${inter.className} bg-slate-50 text-slate-900 antialiased overflow-x-hidden min-h-screen flex flex-col justify-between`}
+      >
         <Navbar />
-        <div className="grow">{children}</div>
+        <main className="grow">{children}</main>
         <Footer />
         <FloatingWA />
       </body>
